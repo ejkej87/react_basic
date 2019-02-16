@@ -3,22 +3,27 @@ var movies = [
       id: 1,
       title: 'Harry Potter',
       desc: 'Film o czarodzieju',
-      photo:  'https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/harry_potter_footage_rpg_leak.jpeg?itok=ZDCBGdBt'
+      photo: ('images/Harry_Potter.png')
    },
    {
       id: 2,
       title: 'Król Lew',
-      desc: 'Film o królu sawanny'
+      desc: 'Film o królu sawanny',
+      photo: ('images/Krol_lew.png')
+
    },
    {
       id: 3,
       title: 'Matrix',
-      desc: 'Film o hakerze'
+      desc: 'Film o hakerze',
+      photo: ('images/Matrix.png')
    },
    {
       id: 4,
       title: 'Kingsman',
-      desc: 'Film szpiegowski'
+      desc: 'Film szpiegowski',
+      photo: ('images/Kingsman.png')
+
    },
    
 ];
@@ -27,7 +32,7 @@ var moviesElements = movies.map(function (movie) {
    return React.createElement('li', {key: movie.id},
       React.createElement('h2', {}, movie.title),
       React.createElement('p', {}, movie.desc),
-      React.createElement('image', {}, movie.photo)
+      React.createElement('img', {src: movie.photo})
    );
 });
 
