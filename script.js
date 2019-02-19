@@ -57,7 +57,8 @@ var Movie = React.createClass({
       'div',
       {},
       React.createElement(GalleryItem, { image: this.props.movie.photo }),
-      React.createElement(MovieTitle, { title: this.props.movie.title })
+      React.createElement(MovieTitle, { title: this.props.movie.title }),
+       React.createElement(movieDescription, { desc: this.props.movie.desc})
     )
   }
 })
@@ -89,7 +90,7 @@ var movieDescription = React.createClass({
     return React.createElement(
       'div',
       {},
-      React.createElement(Movie, { desc: this.props.movie.desc })
+       React.createElement('h2', {}, this.props.desc)
     )
   }
 })
